@@ -4,15 +4,14 @@ from agno.tools.youtube import YouTubeTools
 from agno.models.groq import Groq 
 from dotenv import load_dotenv 
 # adding the database 
-from agno.db.sqlite import SqliteDb
+# from agno.db.sqlite import SqliteDb
 
 load_dotenv()
 
-db=SqliteDb(db_file="agno.db")
+# db=SqliteDb(db_file="agno.db")
 def yt_agent():
     return Agent(   
         name="Youtube Vedio analyzer",
-        db=db,
         add_history_to_context=True,
         model=Groq(id="openai/gpt-oss-120b"),
         tools=[YouTubeTools()],
