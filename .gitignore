@@ -1,0 +1,9 @@
+@"
+.env
+agno.db
+agno.db-shm
+agno.db-wal
+__pycache__/
+.venv/
+venv/
+"@ | Set-Content .gitignore
